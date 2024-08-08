@@ -181,3 +181,34 @@ a:active {
         transform: skew(10deg, -5deg) scaleY(1);
     }
 }
+
+
+/* || MAIN */
+.main {
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+    margin: var(--MARGIN);
+}
+
+.main__article {
+    scroll-margin-top: 6.5rem;
+    padding-bottom: 1em;
+}
+
+.main__article:first-child {
+    margin-top: 1em;
+}
+
+.main__article:last-child {
+    min-height: calc(100vh - 20rem);
+}
+
+
+/* || FOOTER */
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+    text-align: center;
+}
