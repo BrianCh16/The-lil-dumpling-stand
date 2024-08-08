@@ -1,23 +1,63 @@
-html {
-    font-size: 22px;
+@import url('https://fonts.googleapis.com/css2?family=Orienta&family=Nunito&display=swap');
+
+/* || RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea {
+    font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FF: "Nunito", sans-serif;
+    --FF-HEADINGS: "Orienta", cursive;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* COLORS */
+    --BGCOLOR: orange;
+    --BGCOLOR-FADE: rgb(252, 220, 160);
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --BODY-BGCOLOR: #FFF;
+    --FONT-COLOR: #000;
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+/* || GENERAL STYLES */
+html{
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
 }
 
 body {
-    min-height: 100vh;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-    border-left: 1px solid #333;
-    border-right: 1px solid #333;
-}
-
-th, td, caption {
-    border: 1px solid #333;
-    font-family: 'Courier New', Courier, monospace;
-    border-collapse: separate;
-    padding: 0.5rem;
-}
-
-a:visited {
-    color: blue;
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONT-COLOR);
 }

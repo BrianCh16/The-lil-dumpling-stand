@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Brian Chan">
     <meta name="description" content="The Little Dumpling Stand hours">
     <title>🥟 LDS Hours</title>
@@ -11,24 +12,25 @@
 </head>
 
 <body>
-    <header>
-        <h1>Lil Dumpling Stand Hours</h1>
+    <header class="header">
+        <h1 class="header__h1">Lil Dumpling Stand Hours</h1>
 
-        <nav aria-label="primary-navigation">
-            <ul>
+        <nav class="header__nav" aria-label="primary-navigation">
+            <ul class="header__ul">
                 <li><a href="/">Home</a></li>
-                <li><a href="/#about">About LDS</a></li>
-                <li><a href="/#menu">Our Menu</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="/#menu">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-
-        <figure>
-            <img src="img/steamed-dumplings.jpg" alt="Steamed Dumplings in Bamboo Steamer" title="Fragrant Dumplings" width="500">
-            <figcaption>Steamed Dumplings in Bamboo Steamer</figcaption>
-        </figure>
     </header>
-    <hr>
+    
+    <section class="hero">
+        <figure>
+            <img src="img/steamed-dumplings.jpg" alt="Steamed Dumplings in Bamboo Steamer" title="Fragrant Dumplings" width="1000">
+            <figcaption class="offscreen">Steamed Dumplings in Bamboo Steamer</figcaption>
+        </figure>
+    </section>
 
     <main>
         <p>We are open 7 days a week!</p>

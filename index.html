@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Brian Chan">
     <meta name="description" content="The official website for The Little Dumpling Stand">
     <title>🥟 The Little Dumpling Stand</title>
@@ -11,33 +12,36 @@
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to The Lil Dumpling Stand</h1>
-
-        <nav aria-label="primary-navigation">
-            <ul>
+    <header class="header">
+        <h1 class="header__h1">Welcome to The Lil Dumpling Stand</h1>
+        <nav class="header__nav" aria-label="primary-navigation">
+            <ul class="header__ul">
                 <li>
-                    <a href="#about">About <abbr title="Lil Dumpling Stand">LDS</abbr></a>
+                    <a href="#menu">Menu</a>
                 </li>
                 <li>
-                    <a href="#menu">Our Menu</a>
+                    <a href="hours.html">Hours</a>
                 </li>
                 <li>
-                    <a href="hours.html">Store Hours</a>
+                    <a href="contact.html">Contact</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="about.html">About</a>
                 </li>
             </ul>
         </nav>
+    </header>
 
+    <section class="hero">
+        <h2 class="hero__h2">Hello!</h2>
         <figure>
             <img src="img/dumplings-fried.jpg" alt="Pan-Fried Dumplings with complimentary soy sauce."
-                title="Yummy Dumplings" width="500">
-            <figcaption>Pan-Fried Dumplings with complimentary soy sauce</figcaption>
+                title="Yummy Dumplings" width="1000">
+            <figcaption class="offscreen">
+                Pan-Fried Dumplings with complimentary soy sauce
+            </figcaption>
         </figure>
-    </header>
-    <hr>
+    </section>
 
     <main>
         <article id="about">
