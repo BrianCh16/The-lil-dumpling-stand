@@ -307,6 +307,7 @@ a:active {
     border-radius: var(--BORDER-RADIUS);
     background-color: var(--HIGHLIGHT-COLOR);
     color: var(--HEADER-COLOR);
+    font-weight: bold;
 }
 
 
