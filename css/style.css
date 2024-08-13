@@ -15,7 +15,9 @@ img {
     height: auto;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
     font: inherit;
 }
 
@@ -46,6 +48,7 @@ input, button, textarea {
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
+    --BORDER-RADIUS: 15px;
 
     /* STANDARD PADDING */
     --PADDING-TOP-BOTTOM: 0.25em;
@@ -72,7 +75,7 @@ input, button, textarea {
 
 
 /* || GENERAL STYLES */
-html{
+html {
     scroll-behavior: smooth;
     font-size: var(--FS);
     font-family: var(--FF);
@@ -91,12 +94,15 @@ body {
     box-shadow: 0 0 10px var(--BORDER-COLOR);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--FF-HEADINGS);
     letter-spacing: 0.1em;
 }
 
-h2, h3 {
+h2,
+h3 {
     margin-bottom: 1em;
     color: var(--HIGHLIGHT-COLOR);
 }
@@ -116,6 +122,18 @@ a:focus-visible {
 
 a:active {
     color: var(--LINK-ACTIVE);
+}
+
+/* this is to PUSH footers down to the bottom when content is not enough (especially at smaller viewport dimensions) while keeping responsiveness */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+.flex-container footer {
+    margin-top: auto;
 }
 
 
@@ -161,7 +179,7 @@ a:active {
     text-shadow: 2px 2px 5px var(--BORDER-COLOR);
     position: absolute;
     top: -100px;
-    left:20px;
+    left: 20px;
     animation: showWelcome 0.75s ease-in-out 1s forwards;
 }
 
@@ -245,14 +263,86 @@ a:active {
 .contact__input,
 .contact__textarea {
     padding: 0.5em;
-    border-radius: 15px;
+    border-radius: var(--BORDER-RADIUS);
     border-width: 2px;
     width: 100%;
 }
 
 .contact__button {
     padding: 0.5em;
-    border-radius: 15px;
+    border-radius: var(--BORDER-RADIUS);
     background-color: var(--HIGHLIGHT-COLOR);
     color: var(--HEADER-COLOR);
+}
+
+
+/* || MENU */
+thead,
+tbody,
+tfoot,
+tr {
+    display: contents;
+}
+
+.menu__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "hd1 hd2 hd3"
+        "st st1 st1p"
+        "st st2 st2p"
+        "st st3 st3p"
+        "fr fr1 fr1p"
+        "fr fr2 fr2p"
+        "fr fr3 fr3p"
+        "cs cs cs";
+    gap: 0.1em;
+    margin-bottom: 1em;
+}
+
+.menu__steamed {
+    grid-area: st;
+}
+
+.menu__fried {
+    grid-area: fr;
+}
+
+.menu__soup {
+    grid-area: cs;
+}
+
+.menu__steamed,
+.menu__fried,
+.menu__soup,
+.menu__header {
+    color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.menu__header, .menu__item {
+    width: 100%;
+    padding: 1em;
+    border: medium ridge var(--BORDER-COLOR);
+}
+
+.menu__item {
+    display: grid;
+    place-content: center;
+}
+
+thead th:first-child {
+    border-top-left-radius: var(--BORDER-RADIUS);
+}
+
+thead th:last-child {
+    border-top-right-radius: var(--BORDER-RADIUS);
+}
+
+tfoot td {
+    border-bottom-left-radius: var(--BORDER-RADIUS);
+    border-bottom-right-radius: var(--BORDER-RADIUS);
 }
